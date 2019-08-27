@@ -168,7 +168,7 @@ struct snd_soc_acpi_mach  snd_soc_acpi_intel_cherrytrail_machines[] = {
 	},
     	{
 		.id = "10EC5659",
-		.drv_name = "bytcr_rt5651",
+		.drv_name = "bytcr_rt5659",
 		.fw_filename = "intel/fw_sst_22a8.bin",
 		.board = "bytcr_rt5659",
 		.sof_fw_filename = "sof-cht.ri",

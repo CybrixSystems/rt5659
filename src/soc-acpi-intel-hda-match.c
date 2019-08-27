@@ -8,7 +8,8 @@
 
 #include <sound/soc-acpi.h>
 #include <sound/soc-acpi-intel-match.h>
-#include "../skylake/skl.h"
+//#include "../skylake/skl.h"
+#include "skl.h"
 
 static struct skl_machine_pdata hda_pdata = {
 	.use_tplg_pcm = true,

@@ -28,7 +28,9 @@ ifneq ($(KERNELRELEASE),)
 EXTRA_CFLAGS += -I$(src)/inc
 EXTRA_CFLAGS += -Werror
 
-obj-$(CONFIG_SND_SOC_ACPI_INTEL_MATCH) := src/soc-acpi-intel-match.o
+# obj-$(CONFIG_SND_SOC_ACPI_INTEL_MATCH) := soc-acpi-intel-match.o
+
+# obj-$(CONFIG_SND_SOC_ACPI_INTEL_MATCH) := snd-soc-acpi-intel-match-objs
 
 snd-soc-acpi-intel-match-objs := src/soc-acpi-intel-byt-match.o src/soc-acpi-intel-cht-match.o \
 	src/soc-acpi-intel-hsw-bdw-match.o \
@@ -36,6 +38,9 @@ snd-soc-acpi-intel-match-objs := src/soc-acpi-intel-byt-match.o src/soc-acpi-int
 	src/soc-acpi-intel-bxt-match.o src/soc-acpi-intel-glk-match.o \
 	src/soc-acpi-intel-cnl-match.o src/soc-acpi-intel-icl-match.o \
 	src/soc-acpi-intel-hda-match.o
+
+obj-$(CONFIG_SND_SOC_ACPI_INTEL_MATCH) := snd-soc-acpi-intel-match.o
+
 # snd-soc-acpi-intel-match-objs += src/tfa_container.o
 # snd-soc-acpi-intel-match-objs += src/tfa_dsp.o
 # snd-soc-acpi-intel-match-objs += src/tfa_init.o
