@@ -13,6 +13,15 @@
 ifeq ($(CONFIG_SND_SOC_ACPI_INTEL_MATCH),)
 CONFIG_SND_SOC_ACPI_INTEL_MATCH := m
 endif
+ifeq ($(CONFIG_SND_SOC_INTEL_CHT_BSW_RT5659_MACH),)
+CONFIG_SND_SOC_INTEL_CHT_BSW_RT5659_MACH := m
+endif
+ifeq ($(CONFIG_SND_SOC_INTEL_CHT_BSW_RT5659_MACH),)
+CONFIG_SND_SOC_INTEL_CHT_BSW_RT5659_MACH := m
+endif
+ifeq ($(CONFIG_SND_SOC_INTEL_CHT_BSW_RT5659_MACH),)
+CONFIG_SND_SOC_INTEL_CHT_BSW_RT5659_MACH := m
+endif
 
 ifneq ($(KERNELRELEASE),)
 
@@ -32,6 +41,12 @@ EXTRA_CFLAGS += -Werror
 
 # obj-$(CONFIG_SND_SOC_ACPI_INTEL_MATCH) := snd-soc-acpi-intel-match-objs
 
+# snd-cht-dpcm-rt5659-objs := src/rt5659.o src/cht_bsw_rt5659.o 
+# snd-cht-dpcm-rt5659-objs := src/rt5670.o src/cht_bsw_rt5659.o 
+snd-cht-dpcm-rt5659-objs := src/cht_bsw_rt5659.o 
+
+
+
 snd-soc-acpi-intel-match-objs := src/soc-acpi-intel-byt-match.o src/soc-acpi-intel-cht-match.o \
 	src/soc-acpi-intel-hsw-bdw-match.o \
 	src/soc-acpi-intel-skl-match.o src/soc-acpi-intel-kbl-match.o \
@@ -40,7 +55,7 @@ snd-soc-acpi-intel-match-objs := src/soc-acpi-intel-byt-match.o src/soc-acpi-int
 	src/soc-acpi-intel-hda-match.o
 
 obj-$(CONFIG_SND_SOC_ACPI_INTEL_MATCH) := snd-soc-acpi-intel-match.o
-
+obj-$(CONFIG_SND_SOC_INTEL_CHT_BSW_RT5659_MACH) := snd-cht-dpcm-rt5659.o
 # snd-soc-acpi-intel-match-objs += src/tfa_container.o
 # snd-soc-acpi-intel-match-objs += src/tfa_dsp.o
 # snd-soc-acpi-intel-match-objs += src/tfa_init.o
